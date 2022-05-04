@@ -1,0 +1,30 @@
+PRODUCT FIELDS
+    name
+    image
+    category
+    description = rebate start date
+                rebate expiry date
+    actual price 
+    reduced price
+
+USER FIELDS use username module
+    first_name
+    last_name
+    email ---- unique
+    password
+    number
+    retailers
+
+RETAILER FIELDS
+    name
+    email ----- unique
+    password
+    location
+
+
+
+
+users can be linked to one or many retailers
+retailers can have many products
+
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+    <div id="signupmaindiv" class="signupmaindiv">
+        <div class=" col-6 offset-4  myform">
+            <form action = '' class="signupform" method = 'POST'>
+                {% csrf_token %}
+                <h2>Sign Up Here</h2>
+                <label for="name">First Name</label>: <input type="text" name="first_name" placeholder="Enter First Name" required ><br>
+                <label for="lastname">Last Name</label>: <input type="text" name="last_name"  required ><br>
+                <label for="useremail">Email</label>: <input type="text" name="umail"  required><br>
+                <label for="phonenumber">Number</label>: <input type="phonenumber" name="phone_number" required><br>
+                <select>
+                    {% for retaiers in Retailer %}
+                    <option>{{ retaiers.retailer_name }}</option>
+                    {% endfor%}
+                </select>
+                <label for="retailer">Retailer</label>: <input type="" name="shopping_place"><br>
+                <label for="password">Password</label>: <input type="password" required name="user_password">
+                <button class="btn btn-success" type="submit">Sign Up</button> 
+                <h6><a href="#">Already have an account? Sign in</a></h6>
+            </form>
+        </div>
+    </div>
+{% endblock %}
